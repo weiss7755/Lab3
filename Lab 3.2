@@ -1,0 +1,39 @@
+using System;
+
+class Vehicle
+{
+    public virtual void Describe()
+    {
+        Console.WriteLine("Це транспортний засіб.");
+    }
+}
+
+class Car : Vehicle
+{
+    public override void Describe()
+    {
+        Console.WriteLine("Це автомобіль. Має чотири колеса та двигун.");
+    }
+}
+
+class Bike : Vehicle
+{
+    public override void Describe()
+    {
+        Console.WriteLine("Це велосипед. Має два колеса та рухається за допомогою педалей.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Vehicle genericVehicle = new Vehicle();
+        Vehicle myCar = new Car();
+        Vehicle myBike = new Bike();
+
+        genericVehicle.Describe();
+        myCar.Describe();
+        myBike.Describe();
+    }
+}
